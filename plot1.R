@@ -20,6 +20,6 @@ mySelectData<- subset(myData, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 # Plot selected data as histogram
 png("plot1.png",height=480, width=480, bg="transparent")
-hist(mySelectData$Global_active_power,col="red",xlab="Global Active Power 
-     (kilowatts)",main="Global Active Power")
+hist(mySelectData$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",
+     main="Global Active Power")
 dev.off()
