@@ -35,18 +35,19 @@ mySelectData2<-strptime(mySelectData$datetime,format="%Y-%m-%d %H:%M:%S")
 png("plot4.png",height=480, width=480, bg="transparent")
 par(mfrow=c(2,2))
 plot(mySelectData2,mySelectData$Global_active_power,type="l",xlab="",
-     ylab="Global Active Power",main="")
-plot(mySelectData2,mySelectData$Voltage, type="l",xlab="datetime", ylab="Voltage")
+     ylab="Global Active Power",main="",cex.lab=.9,cex.axis=.9)
+plot(mySelectData2,mySelectData$Voltage, type="l",xlab="datetime", ylab=
+             "Voltage",cex.lab=.9,cex.axis=.9)
 plot(mySelectData2,mySelectData$Sub_metering_1,type="l",xlab="",
-     ylab="Energy sub metering",ylim=c(0,38))
+     ylab="Energy sub metering",ylim=c(0,38),cex.lab=.9,cex.axis=.9)
 par(new=TRUE)
 plot(mySelectData2,mySelectData$Sub_metering_2,type="l",xlab="",
-     ylab="Energy sub metering",ylim=c(0,38),col="red")
+     ylab="Energy sub metering",ylim=c(0,38),col="red",cex.lab=.9,cex.axis=.9)
 par(new=TRUE)
 plot(mySelectData2,mySelectData$Sub_metering_3,type="l",xlab="",
-     ylab="Energy sub metering",ylim=c(0,38),col="blue")
+     ylab="Energy sub metering",ylim=c(0,38),col="blue",cex.lab=.9,cex.axis=.9)
 legend('topright', c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
        lty=1, col=c("black","red","blue"), bty="n", cex=0.9)
 plot(mySelectData2,mySelectData$Global_reactive_power,type="l",xlab="datetime",
-     ylab="Global_reactive_power",main="")
+     ylab="Global_reactive_power",main="",cex.lab=.9,cex.axis=.9)
 dev.off()
